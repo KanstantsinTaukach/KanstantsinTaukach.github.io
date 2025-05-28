@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CV | Kanstantsin Taukach | Unreal Engine Developer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Consolas', 'Courier New', monospace;
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00aaff;
+      margin-bottom: 40px;
+    }
+
+    .pills {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .pill {
+      padding: 20px 40px;
+      border-radius: 30px;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .blue {
+      background-color: #007acc;
+      color: white;
+    }
+
+    .red {
+      background-color: #cc0000;
+      color: white;
+    }
+
+    .pill:hover {
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .resume-container {
+      width: 70%;
+      max-width: 2000px;
+      margin: auto;
+    }
+
+    body.resume {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      font-family: 'Consolas', 'Courier New', monospace;
+      margin: 0;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    h1, h2 {
+      color: #00aaff;
+      border-bottom: 1px solid #333;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 25px;
+      background-color: #2d2d2d;
+      border-radius: 6px;
+    }
+
+    pre {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    code {
+      font-family: Consolas, "Courier New", monospace;
+    }
+
+    .keyword { color: #c586c0; }
+    .directive { color: gray; }
+    .type { color: #4ec9b0; }
+    .var-name { color: #dcdcdc; }
+    .value { color: #ce9178; }
+    .function-call { color: #ffd700; }
+    .modifier { color: #569cd6; }
+    .storage { color: #569cd6; }
+    .link { color: #4da6ff; text-decoration: none; }
+    .link:hover { text-decoration: underline; }
+    .punctuation { color: #bbbbbb; }
+
+    button.back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background-color: #555;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    button.back-btn:hover {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="start-screen" class="centered">
+    <h1>CV | Kanstantsin Taukach | Unreal Engine Developer</h1>
+    <p style="text-align:center;">Choose your version:</p>
+    <div class="pills">
+      <div class="pill blue" onclick="showResume('hr')">Blue Pill<br><small>HR-Optimized</small></div>
+      <div class="pill red" onclick="showResume('dev')">Red Pill<br><small>Tech Lead Version</small></div>
+    </div>
+  </div>
+
+  <div id="hr-resume" class="hidden resume-container">
+    <div class="container">
+      <div class="column">
+        <div class="section">
+          <h2 style="color:#00aaff;">For HR</h2>
+          <h2>Personal Info</h2>
+          <div class="property">FullName: <code>Kanstantsin Taukach</code></div>
+          <div class="property">Location: <code>Brest, Republic of Belarus</code></div>
+          <div class="property">BirthDate: <code>08/06/1985</code></div>
+        </div>
+        <div class="section">
+          <h2>Contact Info</h2>
+          <div class="property">PhoneNumber: <code>(+37529) 828-26-28</code></div>
+          <div class="property">Email: <code><a href="mailto:tovkachkot@gmail.com" class="link">tovkachkot@gmail.com</a></code></div>
+          <div class="property">Telegram: <code><a href="https://t.me/KanstantsinT " target="_blank" class="link">@KanstantsinT</a></code></div>
+          <div class="property">GitHub: <code><a href="https://github.com/KanstantsinTaukach " target="_blank" class="link">https://github.com/KanstantsinTaukach </a></code></div>
+        </div>
+        <div class="section">
+          <h2>Education</h2>
+          <div class="property">Education_1: <code>Institute of Business of BSU | 2017 - 2019 | Software for Information Systems</code></div>
+          <div class="property">Education_2: <code>Brest State Technical University | 2005 - 2009 | Mechanical Engineering Technology</code></div>
+        </div>
+        <div class="section">
+          <h2>Courses</h2>
+          <div class="property">Course_Skillbox: <code>Profession: Game Developer (UE4) from Zero to Middle</code></div>
+          <div class="property">Course_Udemy: <code>Unreal Engine - Complete C++ Game Development Guide</code></div>
+          <div class="property">Course_Stanford: <code>Professional Game Dev in C++ and Unreal Engine</code></div>
+        </div>
+        <div class="section">
+          <h2>Skills</h2>
+          <h3>Programming</h3>
+          <ul>
+            <li>C++ Game Systems Development using UE API</li>
+            <li>OOP Principles & Design Patterns in Game Context</li>
+            <li>Performance Optimization for C++ and Blueprint Code</li>
+          </ul>
+          <h3>AI</h3>
+          <ul>
+            <li>Behavior Trees, Blackboard, Decorators, Services</li>
+            <li>AI Perception System Setup</li>
+            <li>EQS (Environment Query System) Implementation</li>
+          </ul>
+          <h3>VFX</h3>
+          <ul>
+            <li>Niagara Particle Effects Creation</li>
+            <li>GPU/CPU Particles Management</li>
+            <li>VFX Integration with Gameplay Events</li>
+          </ul>
+          <h3>Animation</h3>
+          <ul>
+            <li>Animation Blueprints (Blend Spaces, State Machines)</li>
+            <li>Anim Notifies for Animation Sync</li>
+          </ul>
+          <h3>UI</h3>
+          <ul>
+            <li>UMG Interface Development (HUD, Menus)</li>
+          </ul>
+          <h3>Networking</h3>
+          <ul>
+            <li>Basic Network Replication Understanding</li>
+            <li>RPC Usage in Server-Client Architecture</li>
+            <li>Multiplayer Event Synchronization</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>About Me</h2>
+          <div class="property">CareerGoal: <code>Planning a career in game development. Drawn to the industry by passion for analytics, creating new worlds, and love for games.</code></div>
+          <div class="property">GamingExperience: <code>Over 20 years of gaming experience across genres - from adventures to complex RPGs. Deep understanding of gameplay mechanics and genre specifics.</code></div>
+          <div class="property">WorkStyle: <code>Approaches tasks with clear goals, break big problems into smaller steps, and builds structured solutions. Open to roles in agencies or game dev studios.</code></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dev-resume" class="hidden resume-container">
+    <div class="container">
+      <div class="column">
+        <h2 style="color:#00aaff;">For Tech Leads</h2>
+        <pre><code>
+<span class="directive">#pragma once</span>
+
+<span class="directive">#include</span> <span class="value">"CoreMinimal.h"</span>
+<span class="directive">#include</span> <span class="value">"GameFramework/Actor.h"</span>
+<span class="directive">#include</span> <span class="value">"KanstantsinTaukach.generated.h"</span>
+
+<span class="keyword">UCLASS()</span>
+<span class="storage">class</span> <span class="keyword">SHOOTTHEMUP_API</span> <span class="type">AKanstantsinTaukach</span> : <span class="modifier">public</span> <span class="type">AActor</span>
+{
+    <span class="keyword">GENERATED_BODY()</span>
+<span class="modifier">protected:</span>
+    <span class="storage">virtual void</span> <span class="function-call">BeginPlay()</span> <span class="modifier">override</span>;
+	
+<span class="modifier">public:</span>
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Personal Info"</span>)
+    <span class="type">FName</span> <span class="var-name">FullName</span> = <span class="keyword">TEXT</span>(<span class="value">"Kanstantsin Taukach"</span>);
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Personal Info"</span>)
+    <span class="type">FString</span> <span class="var-name">Location</span> = <span class="keyword">TEXT</span>(<span class="value">"Brest, Republic of Belarus"</span>);
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Personal Info"</span>)
+    <span class="type">FDateTime</span> <span class="var-name">BirthDate</span> = <span class="type">FDateTime</span>(<span class="value">1985</span>, <span class="value">6</span>, <span class="value">8</span>);
+	
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Contact Info"</span>)
+    <span class="type">FString</span> <span class="var-name">PhoneNumber</span> = <span class="keyword">TEXT</span>(<span class="value">"+37529 828-26-28"</span>);
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Contact Info"</span>)
+    <span class="type">FString</span> <span class="var-name">Email</span> = <span class="keyword">TEXT</span>(<span class="value">"tovkachkot@gmail.com"</span>);
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Contact Info"</span>)
+    <span class="type">FString</span> <span class="var-name">Telegram</span> = <span class="keyword">TEXT</span>(<span class="value">"<a href='https://t.me/KanstantsinT ' target='_blank' class='link'>@KanstantsinT</a>"</span>);
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Contact Info"</span>)
+    <span class="type">FString</span> <span class="var-name">GitHub</span> = <span class="keyword">TEXT</span>(<span class="value">"<a href='https://github.com/KanstantsinTaukach ' target='_blank' class='link'>https://github.com/KanstantsinTaukach </a>"</span>);
+    
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Education"</span>)
+    <span class="type">FString</span> <span class="var-name">Education_1</span> = <span class="keyword">TEXT</span>(<span class="value">"Institute of Business of BSU | 2017 - 2019 | Software for Information Systems"</span>);
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Education"</span>)
+    <span class="type">FString</span> <span class="var-name">Education_2</span> = <span class="keyword">TEXT</span>(<span class="value">"Brest State Technical University | 2005 - 2009 | Mechanical Engineering Technology"</span>);
+    
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Courses"</span>)
+    <span class="type">FString</span> <span class="var-name">Course_Skillbox</span> = <span class="keyword">TEXT</span>(<span class="value">"Profession: Game Developer (UE4) from Zero to Middle"</span>);
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Courses"</span>)
+    <span class="type">FString</span> <span class="var-name">Course_Udemy</span> = <span class="keyword">TEXT</span>(<span class="value">"Unreal Engine - Complete C++ Game Development Guide"</span>);
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Courses"</span>)
+    <span class="type">FString</span> <span class="var-name">Course_Stanford</span> = <span class="keyword">TEXT</span>(<span class="value">"Professional Game Dev in C++ and Unreal Engine"</span>);
+    
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="type">TArray<FString></span> <span class="var-name">Programming</span> = 
+    { 
+        <span class="keyword">TEXT</span>(<span class="value">"C++ Game Systems Development using UE API"</span>),
+        <span class="keyword">TEXT</span>(<span class="value">"OOP Principles & Design Patterns in Game Context"</span>),
+        <span class="keyword">TEXT</span>(<span class="value">"Performance Optimization for C++ and Blueprint Code"</span>)
+    };
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="type">TArray<FString></span> <span class="var-name">AI</span> = 
+    {
+        <span class="keyword">TEXT</span>(<span class="value">"Behavior Trees, Blackboard, Decorators, Services"</span>),
+        <span class="keyword">TEXT</span>(<span class="value">"AI Perception System Setup"</span>), 
+        <span class="keyword">TEXT</span>(<span class="value">"EQS (Environment Query System) Implementation"</span>)
+    };
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="type">TArray<FString></span> <span class="var-name">VFX</span> = 
+    {
+        <span class="keyword">TEXT</span>(<span class="value">"Niagara Particle Effects Creation"</span>), 
+        <span class="keyword">TEXT</span>(<span class="value">"GPU/CPU Particles Management"</span>),
+        <span class="keyword">TEXT</span>(<span class="value">"VFX Integration with Gameplay Events"</span>)
+    };
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="type">TArray<FString></span> <span class="var-name">Animation</span> = 
+    {
+        <span class="keyword">TEXT</span>(<span class="value">"Animation Blueprints (Blend Spaces, State Machines)"</span>),
+        <span class="keyword">TEXT</span>(<span class="value">"Anim Notifies for Animation Sync"</span>)
+    };
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="type">TArray<FString></span> <span class="var-name">UI</span> = 
+    {
+        <span class="keyword">TEXT</span>(<span class="value">"UMG Interface Development (HUD, Menus)"</span>)
+    };
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="type">TArray<FString></span> <span class="var-name">Networking</span> = 
+    {
+        <span class="keyword">TEXT</span>(<span class="value">"Basic Network Replication Understanding"</span>), 
+        <span class="keyword">TEXT</span>(<span class="value">"RPC Usage in Server-Client Archtecture"</span>),
+        <span class="keyword">TEXT</span>(<span class="value">"Multiplayer Event Synchronization"</span>)
+    };
+    
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"About"</span>)
+    <span class="type">FString</span> <span class="var-name">CareerGoal</span> = <span class="keyword">TEXT</span>(
+        <span class="value">"Planning a career in game development. Drawn to the industry by passion for analytics, creating new worlds, and love for games"</span>);
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"About"</span>)
+    <span class="type">FString</span> <span class="var-name">GamingExperience</span> = <span class="keyword">TEXT</span>(
+        <span class="value">"Over 20 years of gaming experience across genres - from adventures to complex RPGs. Deep understanding of gameplay mechanics and genre specifics."</span>);
+    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"About"</span>)
+    <span class="type">FString</span> <span class="var-name">WorkStyle</span> = <span class="keyword">TEXT</span>(
+        <span class="value">"Approaches tasks with clear goals, break big problems into smaller steps, and builds structured solutions. Open to roles in agencies or game dev studios."</span>);
+};
+        </code></pre>
+      </div>
+    </div>
+  </div>
+
+  <button class="back-btn hidden" id="backBtn" onclick="goBack()">← Back</button>
+
+  <script>
+    function showResume(type) {
+      document.getElementById("start-screen").classList.add("hidden");
+      document.getElementById("hr-resume").classList.add("hidden");
+      document.getElementById("dev-resume").classList.add("hidden");
+
+      if (type === "hr") {
+        document.getElementById("hr-resume").classList.remove("hidden");
+      } else {
+        document.getElementById("dev-resume").classList.remove("hidden");
+      }
+
+      document.getElementById("backBtn").classList.remove("hidden");
+    }
+
+    function goBack() {
+      document.getElementById("start-screen").classList.remove("hidden");
+      document.getElementById("hr-resume").classList.add("hidden");
+      document.getElementById("dev-resume").classList.add("hidden");
+      document.getElementById("backBtn").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>

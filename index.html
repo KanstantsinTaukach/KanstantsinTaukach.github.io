@@ -132,6 +132,36 @@
     button.back-btn:hover {
       background-color: #777;
     }
+	
+    .download-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 1000;
+      font-family: 'Consolas', 'Courier New', monospace;
+      transition: background-color 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #45a049;
+    }
+    .download-btn.hr-btn {
+      background-color: #007acc;
+    }
+    .download-btn.hr-btn:hover {
+      background-color: #0066b3;
+    }
+    .download-btn.dev-btn {
+      background-color: #cc0000;
+    }
+    .download-btn.dev-btn:hover {
+      background-color: #b30000;
+    }
   </style>
 </head>
 <body>
@@ -144,6 +174,10 @@
       <div class="pill red" onclick="showResume('dev')">Red Pill<br><small>Tech Lead Version</small></div>
     </div>
   </div>
+
+  <button class="download-btn hr-btn hidden" id="downloadHrBtn" onclick="downloadPDF('hr')">Download HR PDF</button>
+  
+  <button class="download-btn dev-btn hidden" id="downloadDevBtn" onclick="downloadPDF('dev')">Download Tech PDF</button>
 
   <div id="hr-resume" class="hidden resume-container">
     <div class="container">
@@ -210,7 +244,7 @@
           </ul>
         </div>
         <div class="section">
-          <h2>About Me</h2>
+          <h2>About Myself</h2>
           <div class="property">CareerGoal: <code>Planning a career in game development. Drawn to the industry by passion for analytics, creating new worlds, and love for games.</code></div>
           <div class="property">GamingExperience: <code>Over 20 years of gaming experience across genres - from adventures to complex RPGs. Deep understanding of gameplay mechanics and genre specifics.</code></div>
           <div class="property">WorkStyle: <code>Approaches tasks with clear goals, break big problems into smaller steps, and builds structured solutions. Open to roles in agencies or game dev studios.</code></div>
@@ -328,11 +362,15 @@
       document.getElementById("start-screen").classList.add("hidden");
       document.getElementById("hr-resume").classList.add("hidden");
       document.getElementById("dev-resume").classList.add("hidden");
+      document.getElementById("downloadHrBtn").classList.add("hidden");
+      document.getElementById("downloadDevBtn").classList.add("hidden");
 
       if (type === "hr") {
         document.getElementById("hr-resume").classList.remove("hidden");
+        document.getElementById("downloadHrBtn").classList.remove("hidden");
       } else {
         document.getElementById("dev-resume").classList.remove("hidden");
+        document.getElementById("downloadDevBtn").classList.remove("hidden");
       }
 
       document.getElementById("backBtn").classList.remove("hidden");
@@ -342,7 +380,18 @@
       document.getElementById("start-screen").classList.remove("hidden");
       document.getElementById("hr-resume").classList.add("hidden");
       document.getElementById("dev-resume").classList.add("hidden");
+      document.getElementById("downloadHrBtn").classList.add("hidden");
+      document.getElementById("downloadDevBtn").classList.add("hidden");
       document.getElementById("backBtn").classList.add("hidden");
+    }
+
+    function downloadPDF(type) {
+      alert(`Preparing ${type.toUpperCase()} version PDF for download...\n\nIn a real implementation, this would trigger download:\n- For HR: kanstantsin_taukach_hr_cv.pdf\n- For Tech Lead: kanstantsin_taukach_tech_cv.pdf`);
+      
+      // const link = document.createElement('a');
+      // link.href = `path/to/${type}_resume.pdf`;
+      // link.download = `kanstantsin_taukach_${type}_cv.pdf`;
+      // link.click();
     }
   </script>
 </body>

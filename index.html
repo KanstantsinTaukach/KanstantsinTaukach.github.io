@@ -187,7 +187,6 @@
           <h2>Personal Info</h2>
           <div class="property">FullName: <code>Kanstantsin Taukach</code></div>
           <div class="property">Location: <code>Brest, Republic of Belarus</code></div>
-          <div class="property">BirthDate: <code>08/06/1985</code></div>
         </div>
         <div class="section">
           <h2>Contact Info</h2>
@@ -202,18 +201,13 @@
           <div class="property">Education_2: <code>Brest State Technical University | 2005 - 2009 | Mechanical Engineering Technology</code></div>
         </div>
         <div class="section">
-          <h2>Courses</h2>
-          <div class="property">Course_Skillbox: <code>Profession: Game Developer (UE4) from Zero to Middle</code></div>
-          <div class="property">Course_Udemy: <code>Unreal Engine - Complete C++ Game Development Guide</code></div>
-          <div class="property">Course_Stanford: <code>Professional Game Dev in C++ and Unreal Engine</code></div>
-        </div>
-        <div class="section">
           <h2>Skills</h2>
           <h3>Programming</h3>
           <ul>
             <li>C++ Game Systems Development using UE API</li>
             <li>OOP Principles & Design Patterns in Game Context</li>
             <li>Performance Optimization for C++ and Blueprint Code</li>
+			<li>Gameplay Ability System</li>
           </ul>
           <h3>AI</h3>
           <ul>
@@ -276,9 +270,7 @@
     <span class="type">FName</span> <span class="var-name">FullName</span> = <span class="keyword">TEXT</span>(<span class="value">"Kanstantsin Taukach"</span>);
     <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Personal Info"</span>)
     <span class="type">FString</span> <span class="var-name">Location</span> = <span class="keyword">TEXT</span>(<span class="value">"Brest, Republic of Belarus"</span>);
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Personal Info"</span>)
-    <span class="type">FDateTime</span> <span class="var-name">BirthDate</span> = <span class="type">FDateTime</span>(<span class="value">1985</span>, <span class="value">6</span>, <span class="value">8</span>);
-	
+    	
     <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Contact Info"</span>)
     <span class="type">FString</span> <span class="var-name">PhoneNumber</span> = <span class="keyword">TEXT</span>(<span class="value">"+37529 828-26-28"</span>);
     <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Contact Info"</span>)
@@ -292,20 +284,14 @@
     <span class="type">FString</span> <span class="var-name">Education_1</span> = <span class="keyword">TEXT</span>(<span class="value">"Institute of Business of BSU | 2017 - 2019 | Software for Information Systems"</span>);
     <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Education"</span>)
     <span class="type">FString</span> <span class="var-name">Education_2</span> = <span class="keyword">TEXT</span>(<span class="value">"Brest State Technical University | 2005 - 2009 | Mechanical Engineering Technology"</span>);
-    
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Courses"</span>)
-    <span class="type">FString</span> <span class="var-name">Course_Skillbox</span> = <span class="keyword">TEXT</span>(<span class="value">"Profession: Game Developer (UE4) from Zero to Middle"</span>);
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Courses"</span>)
-    <span class="type">FString</span> <span class="var-name">Course_Udemy</span> = <span class="keyword">TEXT</span>(<span class="value">"Unreal Engine - Complete C++ Game Development Guide"</span>);
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Courses"</span>)
-    <span class="type">FString</span> <span class="var-name">Course_Stanford</span> = <span class="keyword">TEXT</span>(<span class="value">"Professional Game Dev in C++ and Unreal Engine"</span>);
-    
+        
     <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
     <span class="type">TArray<FString></span> <span class="var-name">Programming</span> = 
     { 
         <span class="keyword">TEXT</span>(<span class="value">"C++ Game Systems Development using UE API"</span>),
         <span class="keyword">TEXT</span>(<span class="value">"OOP Principles & Design Patterns in Game Context"</span>),
-        <span class="keyword">TEXT</span>(<span class="value">"Performance Optimization for C++ and Blueprint Code"</span>)
+        <span class="keyword">TEXT</span>(<span class="value">"Performance Optimization for C++ and Blueprint Code"</span>),
+        <span class="keyword">TEXT</span>(<span class="value">"Gameplay Ability System"</span>)
     };
     <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
     <span class="type">TArray<FString></span> <span class="var-name">AI</span> = 

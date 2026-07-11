@@ -372,12 +372,17 @@
     }
 
     function downloadPDF(type) {
-      alert(`Preparing ${type.toUpperCase()} version PDF for download...\n\nIn a real implementation, this would trigger download:\n- For HR: kanstantsin_taukach_hr_cv.pdf\n- For Tech Lead: kanstantsin_taukach_tech_cv.pdf`);
-      
-      // const link = document.createElement('a');
-      // link.href = `path/to/${type}_resume.pdf`;
-      // link.download = `kanstantsin_taukach_${type}_cv.pdf`;
-      // link.click();
+      const files = {
+        hr: "Resume.pdf",      
+        dev: "Resume.pdf"    
+      };
+	
+	  const link = document.createElement('a');
+      link.href = files[type];
+      link.download = `kanstantsin_taukach_${type}_cv.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);;
     }
   </script>
 </body>

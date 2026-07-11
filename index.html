@@ -175,9 +175,9 @@
     </div>
   </div>
 
-  <button class="download-btn hr-btn hidden" id="downloadHrBtn" onclick="downloadPDF('hr')">Download HR PDF</button>
+  <button class="download-btn hr-btn hidden" id="downloadHrBtn" onclick="downloadPDF('hr')">Download CV</button>
   
-  <button class="download-btn dev-btn hidden" id="downloadDevBtn" onclick="downloadPDF('dev')">Download Tech PDF</button>
+  <button class="download-btn dev-btn hidden" id="downloadDevBtn" onclick="downloadPDF('dev')">Download CV</button>
 
   <div id="hr-resume" class="hidden resume-container">
     <div class="container">
@@ -236,6 +236,7 @@
             <li>RPC Usage in Server-Client Architecture</li>
             <li>Multiplayer Event Synchronization</li>
           </ul>
+			 <h3>GAS</h3>
         </div>
         <div class="section">
           <h2>About Myself</h2>
@@ -266,26 +267,26 @@
     <span class="storage">virtual void</span> <span class="function-call">BeginPlay()</span> <span class="modifier">override</span>;
 	
 <span class="modifier">public:</span>
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Personal Info"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Personal Info"</span>)
     <span class="type">FName</span> <span class="var-name">FullName</span> = <span class="keyword">TEXT</span>(<span class="value">"Kanstantsin Taukach"</span>);
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Personal Info"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Personal Info"</span>)
     <span class="type">FString</span> <span class="var-name">Location</span> = <span class="keyword">TEXT</span>(<span class="value">"Brest, Republic of Belarus"</span>);
     	
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Contact Info"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Contact Info"</span>)
     <span class="type">FString</span> <span class="var-name">PhoneNumber</span> = <span class="keyword">TEXT</span>(<span class="value">"+37529 828-26-28"</span>);
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Contact Info"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Contact Info"</span>)
     <span class="type">FString</span> <span class="var-name">Email</span> = <span class="keyword">TEXT</span>(<span class="value">"tovkachkot@gmail.com"</span>);
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Contact Info"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Contact Info"</span>)
     <span class="type">FString</span> <span class="var-name">Telegram</span> = <span class="keyword">TEXT</span>(<span class="value">"<a href='https://t.me/KanstantsinT ' target='_blank' class='link'>@KanstantsinT</a>"</span>);
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Contact Info"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Contact Info"</span>)
     <span class="type">FString</span> <span class="var-name">GitHub</span> = <span class="keyword">TEXT</span>(<span class="value">"<a href='https://github.com/KanstantsinTaukach ' target='_blank' class='link'>https://github.com/KanstantsinTaukach </a>"</span>);
     
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Education"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Education"</span>)
     <span class="type">FString</span> <span class="var-name">Education_1</span> = <span class="keyword">TEXT</span>(<span class="value">"Institute of Business of BSU | 2017 - 2019 | Software for Information Systems"</span>);
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Education"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Education"</span>)
     <span class="type">FString</span> <span class="var-name">Education_2</span> = <span class="keyword">TEXT</span>(<span class="value">"Brest State Technical University | 2005 - 2009 | Mechanical Engineering Technology"</span>);
         
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Skills"</span>)
     <span class="type">TArray<FString></span> <span class="var-name">Programming</span> = 
     { 
         <span class="keyword">TEXT</span>(<span class="value">"C++ Game Systems Development using UE API"</span>),
@@ -293,46 +294,51 @@
         <span class="keyword">TEXT</span>(<span class="value">"Performance Optimization for C++ and Blueprint Code"</span>),
         <span class="keyword">TEXT</span>(<span class="value">"Gameplay Ability System"</span>)
     };
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Skills"</span>)
     <span class="type">TArray<FString></span> <span class="var-name">AI</span> = 
     {
         <span class="keyword">TEXT</span>(<span class="value">"Behavior Trees, Blackboard, Decorators, Services"</span>),
         <span class="keyword">TEXT</span>(<span class="value">"AI Perception System Setup"</span>), 
         <span class="keyword">TEXT</span>(<span class="value">"EQS (Environment Query System) Implementation"</span>)
     };
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Skills"</span>)
     <span class="type">TArray<FString></span> <span class="var-name">VFX</span> = 
     {
         <span class="keyword">TEXT</span>(<span class="value">"Niagara Particle Effects Creation"</span>), 
         <span class="keyword">TEXT</span>(<span class="value">"GPU/CPU Particles Management"</span>),
         <span class="keyword">TEXT</span>(<span class="value">"VFX Integration with Gameplay Events"</span>)
     };
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Skills"</span>)
     <span class="type">TArray<FString></span> <span class="var-name">Animation</span> = 
     {
         <span class="keyword">TEXT</span>(<span class="value">"Animation Blueprints (Blend Spaces, State Machines)"</span>),
         <span class="keyword">TEXT</span>(<span class="value">"Anim Notifies for Animation Sync"</span>)
     };
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Skills"</span>)
     <span class="type">TArray<FString></span> <span class="var-name">UI</span> = 
     {
         <span class="keyword">TEXT</span>(<span class="value">"UMG Interface Development (HUD, Menus)"</span>)
     };
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Skills"</span>)
     <span class="type">TArray<FString></span> <span class="var-name">Networking</span> = 
     {
         <span class="keyword">TEXT</span>(<span class="value">"Basic Network Replication Understanding"</span>), 
         <span class="keyword">TEXT</span>(<span class="value">"RPC Usage in Server-Client Archtecture"</span>),
         <span class="keyword">TEXT</span>(<span class="value">"Multiplayer Event Synchronization"</span>)
     };
+	<span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"Skills"</span>)
+    <span class="type">TArray<FString></span> <span class="var-name">Other</span> = 
+    {
+        <span class="keyword">TEXT</span>(<span class="value">"GAS"</span>)
+    };
     
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"About"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"About"</span>)
     <span class="type">FString</span> <span class="var-name">CareerGoal</span> = <span class="keyword">TEXT</span>(
         <span class="value">"Planning a career in game development. Drawn to the industry by passion for analytics, creating new worlds, and love for games"</span>);
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"About"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"About"</span>)
     <span class="type">FString</span> <span class="var-name">GamingExperience</span> = <span class="keyword">TEXT</span>(
         <span class="value">"Over 20 years of gaming experience across genres - from adventures to complex RPGs. Deep understanding of gameplay mechanics and genre specifics."</span>);
-    <span class="keyword">UPROPERTY</span>(EditAnywhere, Category = <span class="value">"About"</span>)
+    <span class="keyword">UPROPERTY</span>(VisibleAnywhere, Category = <span class="value">"About"</span>)
     <span class="type">FString</span> <span class="var-name">WorkStyle</span> = <span class="keyword">TEXT</span>(
         <span class="value">"Approaches tasks with clear goals, break big problems into smaller steps, and builds structured solutions. Open to roles in agencies or game dev studios."</span>);
 };
@@ -379,7 +385,7 @@
 	
 	  const link = document.createElement('a');
       link.href = files[type];
-      link.download = `kanstantsin_taukach_${type}_cv.pdf`;
+      link.download = `kanstantsin_taukach_cv.pdf`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);;
